@@ -152,6 +152,7 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 
 GOOD LUCK 😀
 */
+/*
 
 const calculateAverage = (n1, n2, n3) => ((n1 + n2 + n3) / 3).toFixed(1)
 
@@ -178,3 +179,67 @@ console.log(avgDolphins, avgKoalas)
 checkWinner(avgDolphins, avgKoalas)
 checkWinner(200, 100)
 checkWinner(200, 400)
+
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// data structures - ARRAY
+/*
+const friend1 = 'Lucas'
+const friend2 = 'rafael'
+const friend3 = 'deilson'
+
+const friends = ["Deilson", 'Rafael', 'Lucas Igor']
+console.log(friends)
+
+const years = new Array(1991, 1984, 2008, 2022)
+console.log(years)
+
+console.log(friends[0])
+console.log(friends[1])
+console.log(friends[2])
+console.log(friends.length)
+console.log(friends[friends.length - 2])
+
+friends[2] = 'Lucas Igor'
+console.log(friends)
+
+// arrays are not primitive, even if declared with const the values can be altered
+
+const lucas = ['Lucas', 'Tabosa', 2022 - 1991, 'technical trainer', friends]
+console.log(lucas)
+
+const calcAge = function(birthYear){
+    return 2022 - birthYear
+}
+
+const years = [1991, 1967, 2002, 2008, 2019, 1931]
+
+for(let i = 0; i < years.length; i++){
+    console.log(calcAge(years[i]))
+}
+*/
+
+// ARRAY METHODS:
+
+const friends = ["Deilson", 'Rafael', 'Lucas Igor']
+
+// add elements -> push()
+// the return of the push function is the new length value
+friends.push('Gorkem') // adds element at last position
+
+// remove elements -> pop()
+// returns the value of the removed element
+friends.pop() // removed Gorkem -> last element
+
+friends.unshift('Dharini') // adds element in the first index
+
+friends.shift() // removes the first element -> Dharini
+
+console.log(friends)
+console.log(friends.indexOf('Rafael')) // returns the index of the element
+console.log(friends.includes('Lucas Igor')) // returns true or false based on the existence of the element
+console.log(friends.includes('Dharini')) // false
+
+// includes tests with strict equality -> data type matters
