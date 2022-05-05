@@ -293,3 +293,53 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]),]
 console.log(tips)
 
 */
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// DATA STRUCTURE : OBJECTS
+
+// recap of ARRAYS:
+
+const lucasFriends = [
+    'Lucas Igor',
+    'Deilson',
+    'Rafael',
+]
+
+// OBJECTS:
+
+const lucas = {
+    firstName: 'Lucas',
+    lastName: 'Tabosa',
+    friends: ['Lucas Igor', 'Deilson', 'Rafael Britto']
+}
+// console.log(lucas.friends)
+// console.log(lucas.friends[0])
+
+// lucas.friends[1] = 'Deilson Cisne'
+// // dot notation
+// console.log(lucas.friends)
+// // bracket notation -> receives expressions -> produces values
+// console.log(lucas['lastName'])
+
+// const nameKey = 'Name'
+// console.log(lucas['first' + nameKey])
+// console.log(lucas['last' + nameKey])
+// // computing the property name -> using the bracket notation
+
+// const interestedIn = prompt('what do you want to know about Lucas? choose between firstName, lastName, friends')
+
+// console.log(interestedIn)
+// console.log(lucas[interestedIn])
+
+// if(lucas[interestedIn]){
+//     console.log(lucas[interestedIn])
+// } else {
+//     console.log('Wrong request')
+// }
+
+lucas.location = 'Fortaleza, Ceará'
+console.log(lucas)
+
+// Challenge
+// write: Lucas has 3 friends, and the best friend is Lucas Igor
+
+console.log(`${lucas.firstName} has ${lucas.friends.length} friends, and the best friend is ${lucas.friends[0]}`)
