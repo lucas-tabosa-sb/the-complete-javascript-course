@@ -297,7 +297,7 @@ console.log(tips)
 // DATA STRUCTURE : OBJECTS
 
 // recap of ARRAYS:
-
+/*
 const lucasFriends = [
     'Lucas Igor',
     'Deilson',
@@ -311,6 +311,7 @@ const lucas = {
     lastName: 'Tabosa',
     friends: ['Lucas Igor', 'Deilson', 'Rafael Britto']
 }
+*/
 // console.log(lucas.friends)
 // console.log(lucas.friends[0])
 
@@ -335,7 +336,7 @@ const lucas = {
 // } else {
 //     console.log('Wrong request')
 // }
-
+/*
 lucas.location = 'Fortaleza, Ceará'
 console.log(lucas)
 
@@ -343,3 +344,99 @@ console.log(lucas)
 // write: Lucas has 3 friends, and the best friend is Lucas Igor
 
 console.log(`${lucas.firstName} has ${lucas.friends.length} friends, and the best friend is ${lucas.friends[0]}`)
+
+*//*
+
+const lucas = {
+    firstName: 'Lucas',
+    lastName: 'Tabosa',
+    birthyear: 1991,
+    job: 'technical trainer',
+    friends: ['Rafael', 'Deilson', 'Lucas Igor'],
+    hasDriverLicense: true,
+
+    // function expression -> value assigned to a variable, returns a value, necessary to be used in objects
+    // calcAge: function(birthYear) {
+    //     return 2022 - birthYear
+    // }
+
+
+    // 'this' represents the object that calls the function
+    // calcAge: function () {
+    //     console.log(this)
+    //     return 2022 - this.birthyear
+    // }
+
+
+    calcAge: function () {
+       return this.age = 2022 - this.birthyear
+    }
+}
+
+console.log(lucas.calcAge())
+console.log(lucas.age)
+// console.log(lucas['calcAge'](1991)) // arg should not be hardcoded
+*/
+/*
+// challenge : 'Lucas is a 31 years old technical trainer, and he can/cannot drive"
+
+const lucas = {
+    firstName: 'Lucas',
+    lastName: 'Tabosa',
+    birthyear: 1991,
+    job: 'technical trainer',
+    friends: ['Rafael', 'Deilson', 'Lucas Igor'],
+    hasDriverLicense: false,
+
+    calcAge: function() {
+        return this.age = 2022 - this.birthyear
+    },
+
+    showMessage: function() {
+        return `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he ${this.hasDriverLicense ? 'can' : 'cannot'} drive`
+    }
+}
+
+console.log(lucas.showMessage())
+*/
+///////////////////////////////////////
+// Coding Challenge #3
+
+/*
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
+
+1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+
+GOOD LUCK 😀
+*//*
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+        this.bmi = (this.mass / (this.height ** 2)).toFixed(0)
+        return this.bmi
+    }
+}
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        this.bmi = (this.mass / (this.height ** 2)).toFixed(0)
+        return this.bmi
+    }
+}
+
+if(john.calcBMI() > mark.calcBMI()){
+    console.log(`${john.firstName + john.lastName}'s BMI is higher than ${mark.firstName}`)
+} else {
+    console.log(`${mark.firstName} ${mark.lastName}'s BMI is higher than ${john.firstName} (${mark.bmi} x ${john.bmi})`)
+}
+*/
