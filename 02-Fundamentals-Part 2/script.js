@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 // forbids to do somethings, also creates visible errors in console for the dev to see
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -345,7 +345,7 @@ console.log(lucas)
 
 console.log(`${lucas.firstName} has ${lucas.friends.length} friends, and the best friend is ${lucas.friends[0]}`)
 
-*//*
+*/ /*
 
 const lucas = {
     firstName: 'Lucas',
@@ -412,7 +412,7 @@ Let's go back to Mark and John comparing their BMIs! This time, let's use object
 TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 
 GOOD LUCK 😀
-*//*
+*/ /*
 const john = {
     firstName: 'John',
     lastName: 'Smith',
@@ -440,3 +440,195 @@ if(john.calcBMI() > mark.calcBMI()){
     console.log(`${mark.firstName} ${mark.lastName}'s BMI is higher than ${john.firstName} (${mark.bmi} x ${john.bmi})`)
 }
 */
+// LOOPS
+// console.log('lifting repetition 1')
+// console.log('lifting repetition 2')
+// console.log('lifting repetition 3')
+// console.log('lifting repetition 4')
+// console.log('lifting repetition 5')
+// console.log('lifting repetition 6')
+// console.log('lifting repetition 7')
+// console.log('lifting repetition 8')
+// console.log('lifting repetition 9')
+// console.log('lifting repetition 10')
+
+// FOR loops keeps running while condition is TRUE
+// for(let rep = 0; rep <= 10; rep++){
+//     console.log(`lifting repetition ${rep}`)
+// }
+
+//LOOPING THOUGH ARRAYS
+//  const lucasArray = [
+//      'Lucas',
+//      'Tabosa',
+//      2022 - 1991,
+//      'technical trainer',
+//      ['Lucas Igor', 'Deilson', 'Rafael Britto'],
+//      true
+//  ]
+
+//  const types = []
+
+//  for (let i = 0; i < lucasArray.length; i++){
+//     //  const upper = typeof lucasArray[i] === 'string' ? lucasArray[i].toUpperCase() : ''
+//     // reading from lucas array
+//      console.log(lucasArray[i], typeof lucasArray[i])
+//      // filling an array
+//      types.push(typeof lucasArray[i])
+//      // +1 way
+//     //  types[i] = typeof lucasArray[i]
+//  }
+
+//  console.log(types)
+
+//  const years = [1991, 2007, 1969, 2020]
+// const ages = []
+
+//  for(let i = 0; i < years.length; i++){
+//     ages.push(2022 - years[i])
+//  }
+
+//  console.log(ages)
+
+// continue & break
+// const lucasArray = [
+//   "Lucas",
+//   "Tabosa",
+//   2022 - 1991,
+//   "technical trainer",
+//   ["Lucas Igor", "Deilson", "Rafael Britto"],
+//   true,
+// ];
+
+// const types = [];
+
+// console.log("----------- regular loop ----------------");
+// for (let i = 0; i < lucasArray.length; i++) {
+//   // only loops according to the condition:
+//   console.log(lucasArray[i], typeof lucasArray[i]);
+// }
+// console.log(
+//   "--------------- loops all type string, skips what is not a string ----------------"
+// );
+// for (let i = 0; i < lucasArray.length; i++) {
+//   // only loops according to the condition:
+//   if (typeof lucasArray[i] !== "string") continue;
+//   console.log(lucasArray[i], typeof lucasArray[i]);
+// }
+
+// console.log("----- breaks the loop when finding the first number ---------");
+// for (let i = 0; i < lucasArray.length; i++) {
+//   // only loops according to the condition:
+//   if (typeof lucasArray[i] === "number") break;
+//   console.log(lucasArray[i], typeof lucasArray[i]);
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// FUN WITH LOOPS
+// const lucas = [
+//   "Lucas",
+//   "Tabosa",
+//   2022 - 1991,
+//   "technical Trainer",
+//   ["Lucas Igor", "Deilson", "Rafael Britto"],
+// ];
+
+// for (let i = lucas.length - 1; i >= 0; i--) {
+//   console.log(lucas[i]);
+// }
+
+// for (let exercise = 1; exercise <= 3; exercise++){
+//     console.log(`------------ starting exercise ${exercise} ------------------`)
+
+//     for (let rep = 1; rep <= 5; rep++){
+//         console.log(`--- > lifting repetition ${rep}`)
+//     }
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// WHILE LOOP
+
+// for (let rep = 1; rep <= 10; rep++){
+//     console.log(`lifting repetition ${rep}`)
+// }
+
+// let rep = 1;
+
+// while (rep <= 10) {
+//   console.log(`WHILE: lifting repetition ${rep}`);
+
+//   rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1
+// console.log(dice)
+
+// while (dice !== 6){
+//     console.log(`you rolled a : ${dice}`)
+//     dice = Math.trunc(Math.random() * 6) + 1
+//     if(dice == 6){
+//         console.log('loop is about to end...')
+//     }
+// }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// FINAL CODING CHALLENGE
+/*
+Let's improve Steven's tip calculator even more, this time using loops!
+
+1. Create an array 'bills' containing all 10 test bill values
+2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+
+HINT: Call calcTip in the loop and use the push method to add values to the tips and totals arrays 😉
+
+4. BONUS: Write a function 'calcAverage' which takes an array called 'arr' as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it:
+  4.1. First, you will need to add up all values in the array. To do the addition, start by creating a variable 'sum' that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the 'sum' variable. This way, by the end of the loop, you have all values added together
+  4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements)
+  4.3. Call the function with the 'totals' array
+
+GOOD LUCK 😀
+*/
+
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+let tips = []
+let totals = []
+
+const calcTip = function (bill) {
+    if(bill >= 50 && bill <= 300){
+        const tip = bill * 0.15
+        // console.log(`the bill is ${bill} and the tip is 15%: ${tip}`)
+        return tip
+    } else {
+        // console.log(`the bill is ${bill} and the tip is 20%: ${tip}`)
+        return bill * 0.2
+    }
+  }
+
+for (let i = 0; i < bills.length; i++){
+    tips.push(calcTip(bills[i]))
+    totals.push(bills[i] + tips[i])
+    console.log(` -- the bill was $${bills[i]} and the tip is ${bills[i] >= 50 && bills[i] <= 300 ? '15%' : '20%'}: $${tips[i]}`)
+
+    let totalsIndex = totals.indexOf(totals[i])
+    let billsIndex = bills.indexOf(bills[i])
+
+    if( billsIndex === totalsIndex){
+        console.log(`
+         ------------------
+         the TOTAL is $${totals[i]}
+         ------------------`)
+    }
+}
+
+const calcAvg = function(arr){
+    let sum = 0
+    for (let i = 0; i < arr.length; i++){
+        sum += arr[i]
+    }
+    const avg = (sum / arr.length)
+    return `the average of all the bills is: $${avg}`
+}
+
+console.log(calcAvg(bills))
+console.log(calcAvg(tips))
+console.log(calcAvg(totals))
