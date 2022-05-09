@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 // forbids to do somethings, also creates visible errors in console for the dev to see
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -345,7 +345,7 @@ console.log(lucas)
 
 console.log(`${lucas.firstName} has ${lucas.friends.length} friends, and the best friend is ${lucas.friends[0]}`)
 
-*//*
+*/ /*
 
 const lucas = {
     firstName: 'Lucas',
@@ -412,7 +412,7 @@ Let's go back to Mark and John comparing their BMIs! This time, let's use object
 TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 
 GOOD LUCK 😀
-*//*
+*/ /*
 const john = {
     firstName: 'John',
     lastName: 'Smith',
@@ -440,3 +440,133 @@ if(john.calcBMI() > mark.calcBMI()){
     console.log(`${mark.firstName} ${mark.lastName}'s BMI is higher than ${john.firstName} (${mark.bmi} x ${john.bmi})`)
 }
 */
+// LOOPS
+// console.log('lifting repetition 1')
+// console.log('lifting repetition 2')
+// console.log('lifting repetition 3')
+// console.log('lifting repetition 4')
+// console.log('lifting repetition 5')
+// console.log('lifting repetition 6')
+// console.log('lifting repetition 7')
+// console.log('lifting repetition 8')
+// console.log('lifting repetition 9')
+// console.log('lifting repetition 10')
+
+// FOR loops keeps running while condition is TRUE
+// for(let rep = 0; rep <= 10; rep++){
+//     console.log(`lifting repetition ${rep}`)
+// }
+
+//LOOPING THOUGH ARRAYS
+//  const lucasArray = [
+//      'Lucas',
+//      'Tabosa',
+//      2022 - 1991,
+//      'technical trainer',
+//      ['Lucas Igor', 'Deilson', 'Rafael Britto'],
+//      true
+//  ]
+
+//  const types = []
+
+//  for (let i = 0; i < lucasArray.length; i++){
+//     //  const upper = typeof lucasArray[i] === 'string' ? lucasArray[i].toUpperCase() : ''
+//     // reading from lucas array
+//      console.log(lucasArray[i], typeof lucasArray[i])
+//      // filling an array
+//      types.push(typeof lucasArray[i])
+//      // +1 way
+//     //  types[i] = typeof lucasArray[i]
+//  }
+
+//  console.log(types)
+
+//  const years = [1991, 2007, 1969, 2020]
+// const ages = []
+
+//  for(let i = 0; i < years.length; i++){
+//     ages.push(2022 - years[i])
+//  }
+
+//  console.log(ages)
+
+// continue & break
+// const lucasArray = [
+//   "Lucas",
+//   "Tabosa",
+//   2022 - 1991,
+//   "technical trainer",
+//   ["Lucas Igor", "Deilson", "Rafael Britto"],
+//   true,
+// ];
+
+// const types = [];
+
+// console.log("----------- regular loop ----------------");
+// for (let i = 0; i < lucasArray.length; i++) {
+//   // only loops according to the condition:
+//   console.log(lucasArray[i], typeof lucasArray[i]);
+// }
+// console.log(
+//   "--------------- loops all type string, skips what is not a string ----------------"
+// );
+// for (let i = 0; i < lucasArray.length; i++) {
+//   // only loops according to the condition:
+//   if (typeof lucasArray[i] !== "string") continue;
+//   console.log(lucasArray[i], typeof lucasArray[i]);
+// }
+
+// console.log("----- breaks the loop when finding the first number ---------");
+// for (let i = 0; i < lucasArray.length; i++) {
+//   // only loops according to the condition:
+//   if (typeof lucasArray[i] === "number") break;
+//   console.log(lucasArray[i], typeof lucasArray[i]);
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// FUN WITH LOOPS
+// const lucas = [
+//   "Lucas",
+//   "Tabosa",
+//   2022 - 1991,
+//   "technical Trainer",
+//   ["Lucas Igor", "Deilson", "Rafael Britto"],
+// ];
+
+// for (let i = lucas.length - 1; i >= 0; i--) {
+//   console.log(lucas[i]);
+// }
+
+// for (let exercise = 1; exercise <= 3; exercise++){
+//     console.log(`------------ starting exercise ${exercise} ------------------`)
+
+//     for (let rep = 1; rep <= 5; rep++){
+//         console.log(`--- > lifting repetition ${rep}`)
+//     }
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// WHILE LOOP
+
+// for (let rep = 1; rep <= 10; rep++){
+//     console.log(`lifting repetition ${rep}`)
+// }
+
+// let rep = 1;
+
+// while (rep <= 10) {
+//   console.log(`WHILE: lifting repetition ${rep}`);
+
+//   rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1
+// console.log(dice)
+
+// while (dice !== 6){
+//     console.log(`you rolled a : ${dice}`)
+//     dice = Math.trunc(Math.random() * 6) + 1
+//     if(dice == 6){
+//         console.log('loop is about to end...')
+//     }
+// }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// FINAL CODING CHALLENG
