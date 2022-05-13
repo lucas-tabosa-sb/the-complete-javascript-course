@@ -45,27 +45,27 @@ const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5]
 
 // SUBPROBLEM: HOW TO MERGE 2 ARRAYS?
 
-const calcTempAmplitudeNew = function (t1, t2) {
-	const temps = t1.concat(t2)
-	console.log(`two arrays merged into one: [${temps}]`)
+// const calcTempAmplitudeNew = function (t1, t2) {
+// 	const temps = t1.concat(t2)
+// 	console.log(`two arrays merged into one: [${temps}]`)
 
-	let max = temps[0]
-	let min = temps[0]
+// 	let max = temps[0]
+// 	let min = temps[0]
 
-	for (let i = 1; i < temps.length; i++) {
-		const currentTemp = temps[i]
-		if (typeof currentTemp !== "number") continue
-		if (currentTemp > max) {
-			max = currentTemp
-		} else if (currentTemp < min) {
-			min = currentTemp
-		}
-	}
-	console.log(`max value is: ${max}, min value is: ${min}`)
-	const amplitude = max - min
-	return `amplitude is: ${amplitude}`
-}
+// 	for (let i = 1; i < temps.length; i++) {
+// 		const currentTemp = temps[i]
+// 		if (typeof currentTemp !== "number") continue
+// 		if (currentTemp > max) {
+// 			max = currentTemp
+// 		} else if (currentTemp < min) {
+// 			min = currentTemp
+// 		}
+// 	}
+// 	console.log(`max value is: ${max}, min value is: ${min}`)
+// 	const amplitude = max - min
+// 	return `amplitude is: ${amplitude}`
+// }
 
-// calcTempAmplitude([3, 7, 4, 23])
-const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 4])
-console.log(amplitudeNew)
+// // calcTempAmplitude([3, 7, 4, 23])
+// const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 4])
+// console.log(amplitudeNew)
