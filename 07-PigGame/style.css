@@ -20,6 +20,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 1.5rem;
 }
 
 /* layout */
@@ -34,7 +35,6 @@ main {
 	border-radius: 9px;
 	overflow: hidden;
 	display: flex;
-	border: 2px solid black;
 }
 
 .player {
@@ -44,7 +44,6 @@ main {
 	flex-direction: column;
 	align-items: center;
 	transition: all 0.75s;
-	border: 2px solid black;
 }
 
 /* elements */
@@ -57,7 +56,6 @@ main {
 	word-spacing: 2px;
 	font-weight: 300;
 	margin-bottom: 1rem;
-	border: 2px solid black;
 }
 
 .score {
@@ -65,7 +63,6 @@ main {
 	font-weight: 300;
 	color: #c7365f;
 	margin-bottom: auto;
-	border: 2px solid black;
 }
 
 .player--active {
@@ -136,6 +133,7 @@ main {
 }
 
 .btn--new {
+	background-color: #fff;
 	top: 4rem;
 }
 .btn--roll {
@@ -143,6 +141,12 @@ main {
 }
 .btn--hold {
 	top: 46.1rem;
+}
+
+.btn--set-points {
+	top: 53rem;
+	width: 30rem !important;
+	height: auto;
 }
 
 .btn:active {
@@ -174,4 +178,8 @@ main {
 
 .hidden {
 	display: none;
+}
+
+.btn-disabled {
+	background-color: rgba(141, 141, 141, 0.555);
 }
