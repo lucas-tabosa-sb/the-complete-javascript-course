@@ -51,3 +51,36 @@
 
 // objects, arrays, function, many more -> reference types -> stored in the heap of the engine
 // primitives -> stored in call stack
+
+// each primitive has its own address in the memory
+// let lastName = "Tabosa"
+// let oldLastName = lastName
+// lastName = "Bulcão"
+
+// console.log(lastName, oldLastName)
+
+// objects have an address memory but it points to a reference in the heap
+const jessica = {
+	firstName: "Jessica",
+	lastName: "Williams",
+	age: 27,
+}
+
+// both have the same reference, changing in the second object also changes in the first
+// let marriedJessica = jessica
+// marriedJessica.lastName = "Davis"
+
+// console.log("Before Marriage", jessica)
+// console.log("after marriage", marriedJessica)
+
+// marriedJessica = {
+// 	firstName: "Jessica",
+// 	lastName: "Davis",
+// 	age: 27,
+// }
+
+// console.log("new married jessica", marriedJessica)
+
+const jessicaCopy = { ...jessica }
+jessicaCopy.lastName = "Tabosa"
+console.log(jessica, jessicaCopy)
