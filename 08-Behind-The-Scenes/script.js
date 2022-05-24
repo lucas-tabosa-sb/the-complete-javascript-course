@@ -30,3 +30,24 @@
 // var me = "Lucas"
 // let job = "tech trainer"
 // const year = 1991
+
+// let age = 30
+// let oldAge = age // refers to the first value of age
+// age = 31
+
+// console.log(age)
+// console.log(oldAge)
+
+// const me = {
+// 	name: "Lucas",
+// 	age: 30,
+// }
+
+// const friend = me
+// friend.age = 28
+
+// console.log("Friend", friend)
+// console.log("Me", me)
+
+// objects, arrays, function, many more -> reference types -> stored in the heap of the engine
+// primitives -> stored in call stack
