@@ -93,18 +93,27 @@ const restaurant = {
 
 
 // spread operator
-const arr = [7, 8, 9]
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]]
-console.log(badNewArr)
+// const arr = [7, 8, 9]
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]]
+// console.log(badNewArr)
 
-const goodNewArr = [1, 2, ...arr]
-console.log(goodNewArr)
+// const goodNewArr = [1, 2, ...arr]
+// console.log(goodNewArr)
 
-const mainMenuCopy = [...restaurant.mainMenu]
-console.log(mainMenuCopy)
+// const mainMenuCopy = [...restaurant.mainMenu]
+// console.log(mainMenuCopy)
 
-// iterables: arrays, strings, maps, sets, NOT OBJECTS
+// // iterables: arrays, strings, maps, sets, NOT OBJECTS
 
-const str = 'Jonas'
-const letters = [...str, '', 's']
-console.log(letters)
+// const str = 'Jonas'
+// const letters = [...str, '', 's']
+// console.log(letters)
+//////////////////////////////////////////////////////////////////////////////
+// REST OPERATOR
+
+
+// SHORT CIRCUITING
+console.log(3 || 'Lucas')
+console.log('' || 'Lucas')
+console.log(true || 0)
+console.log(undefined || null)
