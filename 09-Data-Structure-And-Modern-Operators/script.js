@@ -221,58 +221,58 @@
 // // team1 < team2 && console.log(`${game.team1} is more likely to win`)
 // // team1 > team2 && console.log(`${game.team2} is more likely to win`)
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri','sat','sun']
+// const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri','sat','sun']
 
-const openingHours = {
-	[weekdays[3]]: {
-		open: 12,
-		close: 22
-	},
-	[weekdays[4]]: {
-		open: 11,
-		close: 23
-	},
-	sat: {
-		open: 0,
-		close: 24
-	},
-}
+// const openingHours = {
+// 	[weekdays[3]]: {
+// 		open: 12,
+// 		close: 22
+// 	},
+// 	[weekdays[4]]: {
+// 		open: 11,
+// 		close: 23
+// 	},
+// 	sat: {
+// 		open: 0,
+// 		close: 24
+// 	},
+// }
 
-// OBJECT LITERAL
-const restaurant = {
-	name: "Classico Italiano",
-	location: 'Via Angelo Tavanti 23, Firenze, Italy',
-	categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-	starterMenu: ['Foccacia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// // OBJECT LITERAL
+// const restaurant = {
+// 	name: "Classico Italiano",
+// 	location: 'Via Angelo Tavanti 23, Firenze, Italy',
+// 	categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+// 	starterMenu: ['Foccacia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-	// ES6 enhanced object literals
-	openingHours,
+// 	// ES6 enhanced object literals
+// 	openingHours,
 
-	// no need for function declaration anymore with enhanced objects
-	order(starterIndex, mainIndex){
-		return [this.starterIndex[starterIndex], this.mainMenu[mainIndex]]
-	},
+// 	// no need for function declaration anymore with enhanced objects
+// 	order(starterIndex, mainIndex){
+// 		return [this.starterIndex[starterIndex], this.mainMenu[mainIndex]]
+// 	},
 
-	orderDelivery: function ({
-			starterIndex = 1,
-			mainIndex = 0,
-			time = '20:00',
-			address,
-	}){
-		console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`)
-	},
+// 	orderDelivery: function ({
+// 			starterIndex = 1,
+// 			mainIndex = 0,
+// 			time = '20:00',
+// 			address,
+// 	}){
+// 		console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`)
+// 	},
 
-	orderPasta: function(ing1, ing2, ing3){
-		console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`)
-	},
+// 	orderPasta: function(ing1, ing2, ing3){
+// 		console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`)
+// 	},
 
-	orderPizza: function(mainIngredient, ...otherIngredients){
-		console.log(mainIngredient)
-		console.log(otherIngredients)
-	}
-}
+// 	orderPizza: function(mainIngredient, ...otherIngredients){
+// 		console.log(mainIngredient)
+// 		console.log(otherIngredients)
+// 	}
+// }
 
-console.log(restaurant)
+// console.log(restaurant)
 // // optional chain ing
 // console.log(restaurant.openingHours.mon?.open)
 // console.log(restaurant.openingHours.fri.open)
@@ -328,46 +328,46 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 GOOD LUCK 😀
 */
 
-const game = {
-	team1: 'Bayern Munich',
-	team2: 'Borrussia Dortmund',
-	players: [
-	  [
-		'Neuer',
-		'Pavard',
-		'Martinez',
-		'Alaba',
-		'Davies',
-		'Kimmich',
-		'Goretzka',
-		'Coman',
-		'Muller',
-		'Gnarby',
-		'Lewandowski',
-	  ],
-	  [
-		'Burki',
-		'Schulz',
-		'Hummels',
-		'Akanji',
-		'Hakimi',
-		'Weigl',
-		'Witsel',
-		'Hazard',
-		'Brandt',
-		'Sancho',
-		'Gotze',
-	  ],
-	],
-	score: '4:0',
-	scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-	date: 'Nov 9th, 2037',
-	odds: {
-	  team1: 1.33,
-	  x: 3.25,
-	  team2: 6.5,
-	},
-  };
+// const game = {
+// 	team1: 'Bayern Munich',
+// 	team2: 'Borrussia Dortmund',
+// 	players: [
+// 	  [
+// 		'Neuer',
+// 		'Pavard',
+// 		'Martinez',
+// 		'Alaba',
+// 		'Davies',
+// 		'Kimmich',
+// 		'Goretzka',
+// 		'Coman',
+// 		'Muller',
+// 		'Gnarby',
+// 		'Lewandowski',
+// 	  ],
+// 	  [
+// 		'Burki',
+// 		'Schulz',
+// 		'Hummels',
+// 		'Akanji',
+// 		'Hakimi',
+// 		'Weigl',
+// 		'Witsel',
+// 		'Hazard',
+// 		'Brandt',
+// 		'Sancho',
+// 		'Gotze',
+// 	  ],
+// 	],
+// 	score: '4:0',
+// 	scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+// 	date: 'Nov 9th, 2037',
+// 	odds: {
+// 	  team1: 1.33,
+// 	  x: 3.25,
+// 	  team2: 6.5,
+// 	},
+//   };
 
 //   const keys = Object.keys(game.scored)
 //   console.log(keys)
@@ -378,20 +378,65 @@ const game = {
 //   const entries = Object.entries(game.scored)
 //   console.log(entries)
 
-  for (const [key, value] of game.scored.entries()){
-	  console.log(`Goal ${key + 1}: ${value}`)
-  }
+//   for (const [key, value] of game.scored.entries()){
+// 	  console.log(`Goal ${key + 1}: ${value}`)
+//   }
 
-  const odds = Object.values(game.odds) // array with odds values
-  console.log(odds)
-  let average = 0
-  for (const odd of odds){
-	  average += odd
-	}
+//   const odds = Object.values(game.odds) // array with odds values
+//   console.log(odds)
+//   let average = 0
+//   for (const odd of odds){
+// 	  average += odd
+// 	}
 	
-	console.log(`Odds average: ${(average/odds.length).toFixed(2)}`)
+// 	console.log(`Odds average: ${(average/odds.length).toFixed(2)}`)
 
-for(const [team, odd] of Object.entries(game.odds)){
-	const teamStr = team === 'x' ? 'draw' : `Victory ${game[team]}`
-	console.log(`Odd of ${teamStr} is ${odd}`)
+// for(const [team, odd] of Object.entries(game.odds)){
+// 	const teamStr = team === 'x' ? 'draw' : `Victory ${game[team]}`
+// 	console.log(`Odd of ${teamStr} is ${odd}`)
+// }
+
+// const orderSet = new Set(['Pasta', 'Pizza', 'Pizza','Risotto', 'Pasta', 'Pizza'])
+
+// console.log(orderSet)
+// console.log(orderSet.size)
+// console.log(orderSet.has('Pizza'))
+// console.log(orderSet.has('Bread'))
+// orderSet.add('Garlic Bread')
+// orderSet.add('Garlic Bread')
+// orderSet.delete('Garlic Bread')
+// console.log(orderSet)
+
+
+// console.log(new Set('Jonas'))
+
+// example
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']
+
+// const nonDuplicateStaff = [...new Set(staff)]
+
+// console.log(nonDuplicateStaff)
+// console.log(nonDuplicateStaff)
+
+// MAPS
+// const rest = new Map()
+// rest.set('name', 'Classico Italiano')
+// rest.set(1, 'Firenze, Italy')
+// rest.set(2, 'Lisbon, Portugal')
+// console.log(rest)
+
+const question = new Map([
+	['question', 'What is the best programming language in the world?'],
+	[1, 'C#'],
+	[2, 'Java'],
+	[3, 'Javascript'],
+	['correct', 3],
+	[true, 'Correct'],
+	[false, 'Try again']
+])
+
+console.log(question)
+
+for(const [key, values] of question){
+	console.log(key, values)
 }
