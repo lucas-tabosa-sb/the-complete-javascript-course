@@ -455,33 +455,130 @@ Let's continue with our football betting app! This time, we have a map with a lo
 GOOD LUCK 😀
 */
 
-const gameEvents = new Map([
-	[17, "⚽️ GOAL"],
-	[36, "🔁 Substitution"],
-	[47, "⚽️ GOAL"],
-	[61, "🔁 Substitution"],
-	[64, "🔶 Yellow card"],
-	[69, "🔴 Red card"],
-	[70, "🔁 Substitution"],
-	[72, "🔁 Substitution"],
-	[76, "⚽️ GOAL"],
-	[80, "⚽️ GOAL"],
-	[92, "🔶 Yellow card"],
-])
+// const gameEvents = new Map([
+// 	[17, "⚽️ GOAL"],
+// 	[36, "🔁 Substitution"],
+// 	[47, "⚽️ GOAL"],
+// 	[61, "🔁 Substitution"],
+// 	[64, "🔶 Yellow card"],
+// 	[69, "🔴 Red card"],
+// 	[70, "🔁 Substitution"],
+// 	[72, "🔁 Substitution"],
+// 	[76, "⚽️ GOAL"],
+// 	[80, "⚽️ GOAL"],
+// 	[92, "🔶 Yellow card"],
+// ])
 
-console.log(gameEvents)
+// console.log(gameEvents)
 
-//1.
-const events = [...new Set(gameEvents.values())]
-console.log(events)
-//2.
-gameEvents.delete(64)
-//3.
-const time = [...gameEvents.keys()].pop()
-console.log(time)
-console.log(`An event happened, on average, every ${time / gameEvents.size}`)
-//4.
-for(const [min, event] of gameEvents){
-      const half = min <=45 ? "FIRST" : "SECOND"
-      console.log(`[${half} HALF] ${min} : ${event}`)
+// //1.
+// const events = [...new Set(gameEvents.values())]
+// console.log(events)
+// //2.
+// gameEvents.delete(64)
+// //3.
+// const time = [...gameEvents.keys()].pop()
+// console.log(time)
+// console.log(`An event happened, on average, every ${time / gameEvents.size}`)
+// //4.
+// for(const [min, event] of gameEvents){
+//       const half = min <=45 ? "FIRST" : "SECOND"
+//       console.log(`[${half} HALF] ${min} : ${event}`)
+// }
+
+//; WORKING WITH STRINGS
+const airline = "TAP Air Portugal"
+const plane = "A320"
+
+console.log(plane[0])
+
+console.log(airline.indexOf('r'))
+console.log(airline.lastIndexOf('r'))
+console.log(airline.indexOf('Portugal'))
+console.log(airline.slice(4)) // returns a new string
+console.log(airline.slice(4, 7)) // length of resulting string is end-begin
+
+console.log(airline.slice(0, airline.indexOf(' ')))
+console.log(airline.slice(airline.lastIndexOf(' ') + 1)) // +1 for coming back the empty space
+console.log(airline.slice(-2)) // counts from the end to beginning
+console.log(airline.slice(1, -1))
+
+const checkMiddleSeat = function(seat){
+      // B and E are middle seats
+      const s = seat.slice(-1)
+      if(s === 'B' || s === "E"){
+            console.log('You got the middle seat 😫')
+      } else {
+            console.log('You got lucky')
+      }
 }
+
+checkMiddleSeat('11B')
+checkMiddleSeat('23C')
+checkMiddleSeat('3E')
+
+console.log(new String('Lucas'))
+
+console.log(airline.toLowerCase())
+console.log(airline.toUpperCase())
+
+// fix capitalization in passenger name
+
+const passenger = 'LuCaS'
+const passengerLower = passenger.toLowerCase()
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1)
+console.log(passengerCorrect)
+
+const correctPassengerName = function(passengerName){
+      let wrongName = passengerName.toLowerCase()
+      let nameCorrected = wrongName[0].toUpperCase() + wrongName.slice(1)
+      return nameCorrected
+}
+
+console.log(correctPassengerName('jONas'))
+console.log(correctPassengerName('GabRieLlA'))
+console.log(correctPassengerName('AlejAndRa'))
+
+// comparing email
+const email = 'hello@lucas.com'
+const loginEmail = '   Hello@Lucas.com \n'
+
+// const lowerEmail = loginEmail.toLowerCase()
+// const trimmedEmail = lowerEmail.trim()
+// console.log(email)
+// console.log(trimmedEmail)
+const fixEmail = loginEmail.toLowerCase().trim()
+console.log(fixEmail)
+
+const priceGB = '288,97₤'
+const priceUS = priceGB.replace('₤', '$').replace(',', '.')
+console.log(priceUS)
+
+const announcements = "All passengers come to boarding door 23, Boarding door 23"
+
+console.log(announcements.replace('door', 'gate'))
+console.log(announcements.replace(/door/g, 'gate'))
+
+//booleans
+const plane1 = 'Airbus A320Neo'
+console.log(plane1.includes('A320'))
+console.log(plane1.includes('Boeing'))
+console.log(plane1.startsWith('Air'))
+
+if(plane1.startsWith('Airbus') && plane1.endsWith('Neo')){
+      console.log('Part of the new Airbus family')
+}
+
+// Practice
+const checkBaggage = function(items){
+      const baggage = items.toLowerCase()
+      if(baggage.includes('knife') || baggage.includes('gun')){
+            console.log("You're not allowed in the plane")
+      } else {
+            console.log('Welcome to the flight')
+      }
+}
+
+checkBaggage('I have a laptop, some food and a knife')
+checkBaggage('socks and camera')
+checkBaggage('got some snacks and a gun for protection')
