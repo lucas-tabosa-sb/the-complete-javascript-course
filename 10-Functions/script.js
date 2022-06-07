@@ -48,23 +48,38 @@
 // newPassport(lucas)
 // checkIn(flight, lucas)
 
-const oneWord = function(str){
-    return str.replace(/ /g, '').toLowerCase()
-}
+// const oneWord = function(str){
+//     return str.replace(/ /g, '').toLowerCase()
+// }
 
-const upperFirstWord = function(str){
-    const [first, ...others] = str.split(' ')
-    return [first.toUpperCase(), ...others].join(' ')
-}
+// const upperFirstWord = function(str){
+//     const [first, ...others] = str.split(' ')
+//     return [first.toUpperCase(), ...others].join(' ')
+// }
 
-// higher order function
-const transformer = function(str, fn){
-    console.log(`original string: ${str}`)
-    console.log(`transformed string: ${fn(str)}`)
+// // higher order function
+// const transformer = function(str, fn){
+//     console.log(`original string: ${str}`)
+//     console.log(`transformed string: ${fn(str)}`)
 
-    console.log(`transformed by: ${fn.name}`)
-}
+//     console.log(`transformed by: ${fn.name}`)
+// }
 
-transformer('javascript is the best', upperFirstWord)
-transformer('javascript is the best', oneWord)
+// transformer('javascript is the best', upperFirstWord)
+// transformer('javascript is the best', oneWord)
 
+// const greet = function(greeting){
+//     return function(name){
+//         console.log(`${greeting} ${name}`)
+//     }
+// }
+
+// const greeterHey = greet('Hey') // stores the greet function value
+
+// greeterHey('Jonas')
+// greeterHey('Steven')
+// greet('Hello')('Lucas')
+
+const greet = (greeting) => (personName) => console.log(`${greeting} ${personName}`) 
+
+greet('Hey')('Lucas')
