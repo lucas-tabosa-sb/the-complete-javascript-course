@@ -83,42 +83,88 @@
 // const greet = (greeting) => (personName) => console.log(`${greeting} ${personName}`)
 // greet('Hey')('Lucas')
 
-const lufthansa = {
-    airline: 'Lufthansa',
-    iataCode: 'LH',
-    bookings: [],
-    book: function(flightNum, name){
-        console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`)
-        this.bookings.push({flight: `${this.iataCode}${flightNum}`, name})
-    }
-}
+// const lufthansa = {
+//     airline: 'Lufthansa',
+//     iataCode: 'LH',
+//     bookings: [],
+//     book: function(flightNum, name){
+//         console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`)
+//         this.bookings.push({flight: `${this.iataCode}${flightNum}`, name})
+//     }
+// }
 
-lufthansa.book(239, 'Lucas Tabosa')
-lufthansa.book(635, 'Jonas Schmedtmann')
-console.log(lufthansa)
+// lufthansa.book(239, 'Lucas Tabosa')
+// lufthansa.book(635, 'Jonas Schmedtmann')
+// console.log(lufthansa)
 
-const eurowings = {
-    airline: 'Eurowings',
-    iataCode: 'EW',
-    bookings: [],
-}
+// const eurowings = {
+//     airline: 'Eurowings',
+//     iataCode: 'EW',
+//     bookings: [],
+// }
 
-const book = lufthansa.book
+// const book = lufthansa.book
 //does not work
 // book(23, 'Sarah Williams')
 
 // manipulates the this keyword with the call() function, making it so the this keyworkd points to the object that is passed in the first argument
 
-book.call(eurowings, 23, "Sarah Williams")
-console.log(eurowings)
-book.call(lufthansa, 123, "Mary Cooper")
-console.log(lufthansa)
+// book.call(eurowings, 23, "Sarah Williams")
+// console.log(eurowings)
+// book.call(lufthansa, 123, "Mary Cooper")
+// console.log(lufthansa)
 
-// apply method -> does the same as call() but not receiving arguments, receives an array, not so used anymore
+// // apply method -> does the same as call() but not receiving arguments, receives an array, not so used anymore
 
-const flightData = [528, "George Cooper"]
-book.apply(eurowings, flightData)
-console.log(eurowings)
-// the same as apply -> spreading the array 
-book.call(eurowings, ...flightData)
-console.log(eurowings)
+// const flightData = [528, "George Cooper"]
+// book.apply(eurowings, flightData)
+// console.log(eurowings)
+// // the same as apply -> spreading the array
+// book.call(eurowings, ...flightData)
+// console.log(eurowings)
+
+// // BIND method
+// // manually sets the this keyword
+// const bookEW = book.bind(eurowings)
+// const bookLH = book.bind(lufthansa)
+
+// bookEW(478, 'Esteven Williams')
+// bookLH(498, 'Lucas Tabosa')
+// console.log(eurowings, lufthansa)
+
+// const bookEW23 = book.bind(eurowings, 23)
+// bookEW23('Maria Porcina')
+// console.log(eurowings)
+
+// with event listeners
+// lufthansa.planes = 300
+// const buyPlane = function(){
+//     console.log(this)
+//     this.planes++
+//     console.log(this.planes)
+// }
+
+// const buyPlanes = buyPlane.bind(lufthansa)
+
+// document.querySelector('.buy').addEventListener('click', buyPlanes) // this keyword points to the element clicked
+// // document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa))
+
+// // partial application
+
+// const addTax = (rate, value) => value + value * rate
+
+// console.log(addTax(0.1, 200))
+
+// const addVAT = addTax.bind(null, 0.23) // presets the rate and repeats the functionality from addTax
+// console.log(addVAT(200))
+
+// const addTax2 = function(rate){
+//     return function(value){
+//         console.log(value + value * rate)
+//     }
+// }
+
+// addTax2(0.1)(200)
+
+// const addTax3 = (rate) => (value) => console.log(value + value * rate)
+// addTax3(0.1)(200)
