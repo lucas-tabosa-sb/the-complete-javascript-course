@@ -247,19 +247,61 @@ GOOD LUCK 😀
 
 // CLOSURES ----
 
-const secureBooking = function(){
-    let passengerCount = 0
+// const secureBooking = function(){
+//     let passengerCount = 0
 
-    return function() {
-        passengerCount++
-        console.log(`${passengerCount} passengers`)
-    }
+//     return function() {
+//         passengerCount++
+//         console.log(`${passengerCount} passengers`)
+//     }
+// }
+
+// const booker = secureBooking()
+
+// booker()
+// booker()
+// booker()
+
+// console.dir(booker)
+
+// let f // defined in global scope
+// const g = function(){
+//   const a = 7
+//   f = function (){
+//     console.log(a * 2)
+//   }
+// }
+
+// const h = function(){
+//   const b = 777
+//   f = function() {
+//     console.log(b*2)
+//   }
+// }
+
+
+// g() // variable env is no longer existent
+// f() // access g() variable env regardless
+// console.dir(f) // check closure - a
+// h() // reassigns f variable
+// f() // new function - closed on h() variable env
+// console.dir(f) // check closure - b
+
+// example 2
+
+// after the call it is not on the execution context anymore, so the variables in it are technically gone from the Variable Environment
+const boardPassengers = function(n, wait){
+  const perGroup = n/3
+
+  // will work independently of the boardPassenger fn, but still able to use the variables in it - executing in the global scope
+  setTimeout(function(){
+    console.log(`We're now boardind all ${n} passengers`)
+    console.log(`Thee are 3 groups, each with ${perGroup} passengers`)
+  }, wait * 1000)
+
+  console.log(`Will start boarding in ${wait} seconds`)
 }
 
-const booker = secureBooking()
+const perGroup = 1000 // closure has higher priority over scope chain, so the timeout will still use the perGroup in the closure
 
-booker()
-booker()
-booker()
-
-console.dir(booker)
+boardPassengers(180, 3)
