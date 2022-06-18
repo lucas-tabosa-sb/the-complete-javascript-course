@@ -52,3 +52,25 @@
 // console.log('Lucas'.at(0))
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+
+console.log('------FOR OF-------')
+// for (const movement of movements){
+for (const [i, movement] of movements.entries()){
+    if(movement > 0){
+        console.log(`Moviment ${i + 1}: you deposited ${movement}`)
+    } else {
+        console.log(`Moviment ${i + 1}: you withdrew ${Math.abs(movement)}`)
+    }
+}
+
+console.log('------FOR EACH-------')
+// parameters = current element -> current index -> entire array
+movements.forEach(function(el, i, arr) {
+    if( el > 0){
+        console.log(`Moviment ${i + 1}: you deposited ${el}`)
+    } else {
+        console.log(`Moviment ${i + 1}: you withdrew ${Math.abs(el)}`)
+    }
+})
+
+// continue and break won't work on forEach
