@@ -2,6 +2,72 @@
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
 
+/////////////////////////////////////////////////
+// Data
+const account1 = {
+    owner: 'Jonas Schmedtmann',
+    movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+    interestRate: 1.2, // %
+    pin: 1111,
+  };
+  
+  const account2 = {
+    owner: 'Jessica Davis',
+    movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+    interestRate: 1.5,
+    pin: 2222,
+  };
+  
+  const account3 = {
+    owner: 'Steven Thomas Williams',
+    movements: [200, -200, 340, -300, -20, 50, 400, -460],
+    interestRate: 0.7,
+    pin: 3333,
+  };
+  
+  const account4 = {
+    owner: 'Sarah Smith',
+    movements: [430, 1000, 700, 50, 90],
+    interestRate: 1,
+    pin: 4444,
+  };
+  
+  const accounts = [account1, account2, account3, account4];
+
+
+
+  const createUsernames = function(accs){
+    // mutate the original array
+    // iterates on the accounts array and in each iteration it changes the objects
+
+    accs.forEach(function (acc) {
+
+        // adds the username attribute to the account object
+
+        acc.username = acc.owner
+        .toLowerCase() // picks up the owner attribute: string -> array of lowercase
+        .split(' ') // separates in an array of strings
+        .map(name => name[0]) // returns the first letter of each element in the array
+        .join('') // puts together in one array
+    })
+  }
+
+createUsernames(accounts)
+console.log(accounts)
+
+
+
+
+
+
+
+
+
+
+
+  
+  /////////////////////////////////////////////////
+
 
 
 ///////////////////////////////////////////////////////////
@@ -145,28 +211,25 @@ GOOD LUCK 😀
 
 // MAP / FILTER AND REDUCE
 
-const eurToUsd = 1.1
+// const eurToUsd = 1.1
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
 
-//map
-// const movementsUSD = movements.map(function(mov) {
-//     return (mov * eurToUsd).toFixed(0)
+// //map
+// // const movementsUSD = movements.map(function(mov) {
+// //     return (mov * eurToUsd).toFixed(0)
+// // })
+
+// //map optimized
+// // returns the value automatically
+// const movementsUSD = movements.map(mov => (mov * eurToUsd).toFixed(0))
+
+// const movementsDescription = movements.map((mov, i) => {
+//    return `Movement ${i+1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
+   
 // })
 
-//map optimized
-// returns the value automatically
-const movementsUSD = movements.map(mov => (mov * eurToUsd).toFixed(0))
+// console.log(movementsDescription)
 
-
-console.log(movements)
-console.log(movementsUSD)
-
-const movementsUSDFor = []
-for(const mov of movements){
-    movementsUSDFor.push((mov * eurToUsd).toFixed(0))
-}
-
-console.log(movementsUSDFor)
-
+// // map method has no side effect, it iterates in the whole array and returns a whole new array at the end
 
