@@ -145,3 +145,28 @@ GOOD LUCK 😀
 
 // MAP / FILTER AND REDUCE
 
+const eurToUsd = 1.1
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+
+//map
+// const movementsUSD = movements.map(function(mov) {
+//     return (mov * eurToUsd).toFixed(0)
+// })
+
+//map optimized
+// returns the value automatically
+const movementsUSD = movements.map(mov => (mov * eurToUsd).toFixed(0))
+
+
+console.log(movements)
+console.log(movementsUSD)
+
+const movementsUSDFor = []
+for(const mov of movements){
+    movementsUSDFor.push((mov * eurToUsd).toFixed(0))
+}
+
+console.log(movementsUSDFor)
+
+
