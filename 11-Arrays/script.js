@@ -116,29 +116,57 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-let julia1 = [3, 5, 2, 12, 7]
-let julia2 = [9, 16, 6, 8, 3]
-let kate1 = [4, 1, 15, 8, 3]
-let kate2 = [10, 5, 6, 1, 4]
+// let julia1 = [3, 5, 2, 12, 7]
+// let julia2 = [9, 16, 6, 8, 3]
+// let kate1 = [4, 1, 15, 8, 3]
+// let kate2 = [10, 5, 6, 1, 4]
 
-const checkDogs = function(dogsJulia, dogsKate){
-    const dogsJuliaCorrected = dogsJulia.slice()
-    dogsJuliaCorrected.splice(0, 1) // removes 1 element from index 0
-    dogsJuliaCorrected.splice(-2) // removes 2 last elements
-    const dogs = dogsJuliaCorrected.concat(dogsKate) // concats two arrays
+// const checkDogs = function(dogsJulia, dogsKate){
+//     const dogsJuliaCorrected = dogsJulia.slice()
+//     dogsJuliaCorrected.splice(0, 1) // removes 1 element from index 0
+//     dogsJuliaCorrected.splice(-2) // removes 2 last elements
+//     const dogs = dogsJuliaCorrected.concat(dogsKate) // concats two arrays
 
-    console.log(dogs)
-    console.log(dogsJuliaCorrected)
+//     console.log(dogs)
+//     console.log(dogsJuliaCorrected)
 
-    dogs.forEach(function(dog, i){
-        if(dog>=3){
-            console.log(`Dog number ${i+1} is an adult, and is ${dog} years old`)
-        } else {
-            console.log(`Dog number ${i+1} is still a puppy`)
-        }
-    })
+//     dogs.forEach(function(dog, i){
+//         if(dog>=3){
+//             console.log(`Dog number ${i+1} is an adult, and is ${dog} years old`)
+//         } else {
+//             console.log(`Dog number ${i+1} is still a puppy`)
+//         }
+//     })
+// }
+
+// checkDogs(julia1, kate1)
+// console.log('-----------test data 2--------------')
+// checkDogs(julia2, kate2)
+
+// MAP / FILTER AND REDUCE
+
+const eurToUsd = 1.1
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+
+//map
+// const movementsUSD = movements.map(function(mov) {
+//     return (mov * eurToUsd).toFixed(0)
+// })
+
+//map optimized
+// returns the value automatically
+const movementsUSD = movements.map(mov => (mov * eurToUsd).toFixed(0))
+
+
+console.log(movements)
+console.log(movementsUSD)
+
+const movementsUSDFor = []
+for(const mov of movements){
+    movementsUSDFor.push((mov * eurToUsd).toFixed(0))
 }
 
-checkDogs(julia1, kate1)
-console.log('-----------test data 2--------------')
-checkDogs(julia2, kate2)
+console.log(movementsUSDFor)
+
+
