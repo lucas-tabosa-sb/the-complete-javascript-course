@@ -55,7 +55,13 @@ const account1 = {
 createUsernames(accounts)
 console.log(accounts)
 
+const calcPrintBalance = function(movements){
+  const balance = movements.reduce((acc, mov) => {
+    acc + mov
+  }, 0)
 
+  labelBalance.textContent = `${balance} EUR`
+}
 
 
 
@@ -236,27 +242,42 @@ GOOD LUCK 😀
 // // map method has no side effect, it iterates in the whole array and returns a whole new array at the end
 
 // filter method
+// const deposits = movements.filter(function(mov){
+//     return mov > 0
+// })
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+// console.log(deposits)
 
-const deposits = movements.filter(function(mov){
-    return mov > 0
-})
+// // with for loop
+// const depositsFor = []
+// for (const mov of movements){
+//   if(mov > 0){
+//     depositsFor.push(mov)
+//   }
+// }
 
-console.log(deposits)
+// console.log(depositsFor)
 
-// with for loop
-const depositsFor = []
-for (const mov of movements){
-  if(mov > 0){
-    depositsFor.push(mov)
-  }
-}
+// const withdrawals = movements.filter(mov => {
+//     return mov < 0
+// })
 
-console.log(depositsFor)
+// console.log(withdrawals)
 
-const withdrawals = movements.filter(mov => {
-    return mov < 0
-})
+// reduce method
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+// // returns a value, not an array
 
-console.log(withdrawals)
+// const balance = movements.reduce(function(acc, cur, i, arr){
+//   console.log(`iteration ${i}: ${acc}`)
+//   return acc + cur
+// }, 0)
+
+// console.log(balance)
+
+// let balanceFor = 0
+// for (const mov of movements){
+//   balanceFor += mov
+// }
+
+// console.log(balanceFor)
