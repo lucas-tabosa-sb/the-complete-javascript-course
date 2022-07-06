@@ -65,6 +65,8 @@ console.log(accounts)
 
 
 
+
+
   
   /////////////////////////////////////////////////
 
@@ -233,3 +235,28 @@ GOOD LUCK 😀
 
 // // map method has no side effect, it iterates in the whole array and returns a whole new array at the end
 
+// filter method
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+
+const deposits = movements.filter(function(mov){
+    return mov > 0
+})
+
+console.log(deposits)
+
+// with for loop
+const depositsFor = []
+for (const mov of movements){
+  if(mov > 0){
+    depositsFor.push(mov)
+  }
+}
+
+console.log(depositsFor)
+
+const withdrawals = movements.filter(mov => {
+    return mov < 0
+})
+
+console.log(withdrawals)
