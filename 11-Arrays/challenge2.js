@@ -39,8 +39,8 @@ function calcAverageHumanAge(dogsAges) {
     console.log(adultDogs)
 
     // reduces the array to a value based on the calculation
-    const averageAge = adultDogs.reduce((acc, cur) => {
-        let avg = Math.floor((acc + cur) / adultDogs.length)
+    const averageAge = adultDogs.reduce((acc, cur, _, arr) => {
+        let avg = Math.floor((acc + cur) / arr.length)
         return avg
     }, 36)
     console.log(averageAge)
