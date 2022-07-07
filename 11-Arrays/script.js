@@ -281,3 +281,17 @@
 // // }
 
 // // console.log(balanceFor)
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+const eurToUsd = 1.1
+
+
+// filter returns an array -> map()
+// map returns an array -> reduce()
+// reduce returns a value
+// it is only possible to chain if the previous method returns an array
+const totalDepositsUSD = movements.filter(mov => mov > 0)
+    .map(mov => mov * eurToUsd)
+        .reduce((acc, mov) => Math.floor(acc + mov, 0))
+
+console.log(totalDepositsUSD)

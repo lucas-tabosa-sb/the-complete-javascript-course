@@ -18,34 +18,34 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-function calcAverageHumanAge(dogsAges) {
-    // if dog age <= 2 = humanAge = 2* dogAge
-    // if dog age > 2 = humanAge = 16 + dogAge*4
+// function calcAverageHumanAge(dogsAges) {
+//     // if dog age <= 2 = humanAge = 2* dogAge
+//     // if dog age > 2 = humanAge = 16 + dogAge*4
 
-    // stores the values in an array
+//     // stores the values in an array
 
-    // const humanAges = dogsAges.map(dogAge => (dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4))
-    const humanAges = dogsAges.map(dogAge => {
-        if(dogAge <= 2){
-            return 2 * dogAge
-        } else {
-            return 16 + dogAge * 4
-        }
-    })
-    console.log(humanAges)
+//     // const humanAges = dogsAges.map(dogAge => (dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4))
+//     const humanAges = dogsAges.map(dogAge => {
+//         if(dogAge <= 2){
+//             return 2 * dogAge
+//         } else {
+//             return 16 + dogAge * 4
+//         }
+//     })
+//     console.log(humanAges)
 
-    // stores the validation result in a new array
-    const adultDogs = humanAges.filter(humanAge => humanAge > 18)
-    console.log(adultDogs)
+//     // stores the validation result in a new array
+//     const adultDogs = humanAges.filter(humanAge => humanAge > 18)
+//     console.log(adultDogs)
 
-    // reduces the array to a value based on the calculation
-    const averageAge = adultDogs.reduce((acc, cur, _, arr) => {
-        let avg = Math.floor((acc + cur) / arr.length)
-        return avg
-    }, 36)
-    console.log(averageAge)
+//     // reduces the array to a value based on the calculation
+//     const averageAge = adultDogs.reduce((acc, cur, _, arr) => {
+//         let avg = Math.floor((acc + cur) / arr.length)
+//         return avg
+//     }, 36)
+//     console.log(averageAge)
 
-}
-calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3])
-console.log('-------------------------------')
-calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4])
+// }
+// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3])
+// console.log('-------------------------------')
+// calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4])
